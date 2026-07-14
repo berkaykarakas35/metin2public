@@ -332,7 +332,7 @@ button { font-family: inherit; }
 /* =========================================================
    MAIN LAYOUT (list + sidebar)
    ========================================================= */
-.layout-grid { display: grid; grid-template-columns: 1fr 280px; gap: 20px; align-items: start; }
+.layout-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 20px; align-items: start; }
 @media (max-width: 960px) { .layout-grid { grid-template-columns: 1fr; } }
 
 /* =========================================================
