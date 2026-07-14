@@ -204,47 +204,26 @@
       return;
     }
     grid.innerHTML = list.map(function (s) {
-      var badge = s.status === 'new' ? '<span class="server-badge new">YENİ</span>' :
-        s.status === 'soon' ? '<span class="server-badge soon">YAKINDA</span>' : '';
+      var badge = s.status === 'new' ? '<span class="sv-badge sv-new">YENİ</span>' :
+        s.status === 'soon' ? '<span class="sv-badge sv-hot">YAKINDA</span>' : '';
       var views = viewCount(s.id), comments = commentCount(s.id);
       return (
-        '<div class="server-card">' +
-          '<div class="server-logo-col"><img class="server-logo" src="' + s.logo + '" alt="' + escapeHtml(s.name) + ' logosu"></div>' +
-          '<div class="server-info">' +
-            '<div class="server-name-row"><span class="server-name">' + escapeHtml(s.name) + '</span>' + badge + '</div>' +
-            '<div class="server-meta">' +
-              '<span class="server-date">' + CALENDAR_ICON + ' ' + escapeHtml(s.openDate) + '</span>' +
-              '<span class="server-desc">' + escapeHtml(s.game) + ' &middot; ' + escapeHtml(s.description) + '</span>' +
+        '<div class="sv-card">' +
+          '<div class="sv-logo-col"><img class="sv-logo" src="' + s.logo + '" alt="' + escapeHtml(s.name) + ' logosu"></div>' +
+          '<div class="sv-content">' +
+            '<div class="sv-title-row"><span class="sv-name">' + escapeHtml(s.name) + '</span>' + badge + '</div>' +
+            '<div class="sv-meta">' +
+              '<span class="sv-date">' + CALENDAR_ICON + ' ' + escapeHtml(s.openDate) + '</span>' +
+              '<span class="sv-desc">' + escapeHtml(s.game) + ' &middot; ' + escapeHtml(s.description) + '</span>' +
             '</div>' +
           '</div>' +
-          '<div class="server-vote">' +
-            '<div class="server-stats">' +
-              '<span>' + EYE_ICON + ' ' + views + '</span>' +
-              '<span>' + COMMENT_ICON + ' ' + comments + '</span>' +
-            '</div>' +
-            '<button class="vote-btn" data-vote-id="' + s.id + '" aria-label="Oy ver">&#9650; <span class="vote-count" data-vote-count="' + s.id + '">' + s.votes + '</span></button>' +
+          '<div class="sv-stats">' +
+            '<span class="sv-stat">' + EYE_ICON + ' ' + views + '</span>' +
+            '<span class="sv-stat">' + COMMENT_ICON + ' ' + comments + '</span>' +
           '</div>' +
         '</div>'
       );
     }).join('');
-
-    grid.querySelectorAll('[data-vote-id]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var id = btn.getAttribute('data-vote-id');
-        var key = 'pvp_voted_' + id;
-        var already = false;
-        try { already = !!localStorage.getItem(key); } catch (e) {}
-        if (already) return;
-        var s = SERVERS.find(function (x) { return String(x.id) === String(id); });
-        if (!s) return;
-        s.votes += 1;
-        try { localStorage.setItem(key, '1'); } catch (e) {}
-        var countEl = grid.querySelector('[data-vote-count="' + id + '"]');
-        if (countEl) countEl.textContent = s.votes;
-        btn.disabled = true;
-        btn.style.opacity = '.5';
-      });
-    });
   }
 
   function renderSponsored() {
@@ -252,21 +231,19 @@
     if (!grid) return;
     var list = SERVERS.filter(function (s) { return s.sponsored; });
     grid.innerHTML = list.map(function (s) {
-      var views = viewCount(s.id), votes = s.votes;
+      var views = viewCount(s.id), comments = commentCount(s.id);
       return (
-        '<div class="sponsor-card">' +
-          '<span class="sponsor-badge">SPONSORLU</span>' +
-          '<div style="display:flex;gap:12px;align-items:center;margin-bottom:8px">' +
-            '<img class="server-logo" src="' + s.logo + '" alt="' + escapeHtml(s.name) + ' logosu">' +
-            '<div><div class="server-name">' + escapeHtml(s.name) + '</div>' +
-            '<div class="server-meta"><span>' + escapeHtml(s.game) + '</span></div></div>' +
+        '<a href="#" class="spon-card">' +
+          '<div class="spon-logo"><img src="' + s.logo + '" alt="' + escapeHtml(s.name) + ' logosu"></div>' +
+          '<div class="spon-info">' +
+            '<div class="spon-trow"><span class="spon-name">' + escapeHtml(s.name) + '</span><span class="spon-badge">SPONSORLU</span></div>' +
+            '<div class="spon-meta"><span class="spon-cat">' + escapeHtml(s.game) + '</span>' + escapeHtml(s.description) + '</div>' +
           '</div>' +
-          '<p class="server-desc">' + escapeHtml(s.description) + '</p>' +
-          '<div class="sponsor-stats">' +
-            '<span>' + EYE_ICON + ' ' + views + '</span>' +
-            '<span>&#9650; ' + votes + '</span>' +
+          '<div class="spon-stats">' +
+            '<span class="spon-stat">' + EYE_ICON + ' ' + views + '</span>' +
+            '<span class="spon-stat">' + COMMENT_ICON + ' ' + comments + '</span>' +
           '</div>' +
-        '</div>'
+        '</a>'
       );
     }).join('');
   }
