@@ -144,38 +144,28 @@
 </div>
 
 <!-- Stats row -->
-<section class="stats-row">
-  <div class="container">
-    <div class="stat-item">
-      <span class="stat-icon">🖥</span>
-      <div><div class="stat-value" id="statLiveServers">-</div><div class="stat-label">Aktif Sunucu</div></div>
+<!-- Hero (grid background + live ticker band + headline, matches reference h2-wrap structure) -->
+<div class="hero2-wrap">
+  <div class="hero2-top">
+    <div class="hero2-band">
+      <div class="hero2-band-tag"><span class="hero2-band-dot"></span>CANLI</div>
+      <div class="hero2-band-mask">
+        <div class="hero2-band-track" id="heroBandTrack"></div>
+      </div>
     </div>
-    <div class="stat-item">
-      <span class="stat-icon">👍</span>
-      <div><div class="stat-value" id="statVotes">-</div><div class="stat-label">Toplam Oy</div></div>
-    </div>
-    <div class="stat-item">
-      <span class="stat-icon">🆕</span>
-      <div><div class="stat-value" id="statNewToday">-</div><div class="stat-label">Bugün Yeni</div></div>
-    </div>
-    <div class="stat-item">
-      <span class="stat-icon">📅</span>
-      <div><div class="stat-value" id="statNewServers">-</div><div class="stat-label">Yakında Açılacak</div></div>
+    <div class="hero2-grid-bg"></div>
+    <div class="hero2-top-inner">
+      <div class="hero2-headline">
+        <h1 class="hero2-title">En İyi <span class="accent">Metin2 Sunucularını</span> Keşfet</h1>
+        <p class="hero2-sub">Metin2 için hazırlanmış örnek sunucu tanıtımlarını incele, oy ver ve favorilerini kaydet.</p>
+        <form class="hero-search" onsubmit="return false;">
+          <input type="text" placeholder="Sunucu adı veya oyun türü ara...">
+          <button type="submit" class="btn btn-accent">Ara</button>
+        </form>
+      </div>
     </div>
   </div>
-</section>
-
-<!-- Hero -->
-<section class="hero">
-  <div class="container">
-    <h1>En İyi <span>Metin2 Sunucularını</span> Keşfet</h1>
-    <p>Metin2 için hazırlanmış örnek sunucu tanıtımlarını incele, oy ver ve favorilerini kaydet.</p>
-    <form class="hero-search" onsubmit="return false;">
-      <input type="text" placeholder="Sunucu adı veya oyun türü ara...">
-      <button type="submit" class="btn btn-accent">Ara</button>
-    </form>
-  </div>
-</section>
+</div>
 
 <div class="page-shell">
 <aside class="skyscraper-ad skyscraper-left">

@@ -327,11 +327,19 @@
     var totalServers = SERVERS.length;
     var totalVotes = SERVERS.reduce(function (sum, s) { return sum + s.votes; }, 0);
     var newToday = SERVERS.filter(function (s) { return s.status === 'new'; }).length;
-    var setText = function (id, val) { var el = document.getElementById(id); if (el) el.textContent = val; };
-    setText('statLiveServers', totalServers);
-    setText('statVotes', totalVotes.toLocaleString('tr-TR'));
-    setText('statNewToday', newToday);
-    setText('statNewServers', SERVERS.filter(function (s) { return s.status === 'soon'; }).length);
+    var soonCount = SERVERS.filter(function (s) { return s.status === 'soon'; }).length;
+    var track = document.getElementById('heroBandTrack');
+    if (!track) return;
+    var items = [
+      '<b>' + totalServers + '</b> SUNUCU YAYINDA',
+      '<b>' + totalVotes.toLocaleString('tr-TR') + '</b> OY VERİLDİ',
+      '<b>' + newToday + '</b> BUGÜN YENİ AÇILIŞ',
+      '<b>' + soonCount + '</b> YAKINDA AÇILACAK'
+    ];
+    var group = items.map(function (t) {
+      return '<span class="hero2-bi">' + t + '</span><span class="hero2-bsep">&#9670;</span>';
+    }).join('');
+    track.innerHTML = group + group;
   }
 
   function loadJSON(url) {
