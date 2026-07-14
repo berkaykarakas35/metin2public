@@ -12,23 +12,17 @@
 </head>
 <body>
 
-<!-- Marquee ticker -->
-<div class="marquee-bar">
-  <div class="marquee-track">
-    <span class="marquee-item">⚡ DemoMetin Legends açılışı 18 Temmuz'da başlıyor</span>
-    <span class="marquee-item">🔥 TestMyko Realm haftalık turnuva kayıtları açık</span>
-    <span class="marquee-item">🎁 Yeni üyelere özel hoş geldin ödülleri</span>
-    <span class="marquee-item">⚡ DemoMetin Legends açılışı 18 Temmuz'da başlıyor</span>
-    <span class="marquee-item">🔥 TestMyko Realm haftalık turnuva kayıtları açık</span>
-    <span class="marquee-item">🎁 Yeni üyelere özel hoş geldin ödülleri</span>
+<!-- Top banner bars: image thumb + bold text + dismiss button -->
+<div class="top-banners-wrap" id="topBannersWrap">
+  <div class="top-banner-bar danger" id="topBanner1">
+    <img class="top-banner-img" src="assets/images/logo.png" alt="" aria-hidden="true">
+    <span class="top-banner-text">⚡ DemoMetin Legends açılışı 18 Temmuz'da başlıyor — beta kayıtları açık!</span>
+    <button class="top-banner-close" type="button" data-close-banner="topBanner1" aria-label="Kapat">✕</button>
   </div>
-</div>
-<div class="marquee-bar promo-bar">
-  <div class="marquee-track">
-    <span class="marquee-item">★ Bu alana reklamınızı verebilirsiniz — METIN2PUBLIC.COM ★</span>
-    <span class="marquee-item">★ Sunucunuzu öne çıkarın, sponsorlu listeye katılın ★</span>
-    <span class="marquee-item">★ Bu alana reklamınızı verebilirsiniz — METIN2PUBLIC.COM ★</span>
-    <span class="marquee-item">★ Sunucunuzu öne çıkarın, sponsorlu listeye katılın ★</span>
+  <div class="top-banner-bar dark" id="topBanner2">
+    <img class="top-banner-img" src="assets/images/logo.png" alt="" aria-hidden="true">
+    <span class="top-banner-text">★ Bu alana reklamınızı verebilirsiniz — METIN2PUBLIC.COM ★</span>
+    <button class="top-banner-close" type="button" data-close-banner="topBanner2" aria-label="Kapat">✕</button>
   </div>
 </div>
 
@@ -77,7 +71,7 @@
         <a href="#">REKLAM VER</a>
       </nav>
       <div class="header-right">
-        <a href="#" class="btn btn-accent btn-desktop-only"><span>+</span> Sunucu Ekle</a>
+        <a href="#" class="btn btn-add-server btn-desktop-only"><span>+</span> Sunucu Ekle</a>
         <div class="header-search" id="headerSearchWrap">
           <div class="search-box" id="headerSearchBox">
             <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></span>
@@ -127,7 +121,7 @@
     </button>
   </div>
   <nav class="drawer-nav">
-    <a href="#" class="btn btn-accent" style="width:100%;justify-content:center;margin-bottom:14px">+ Sunucu Ekle</a>
+    <a href="#" class="btn btn-add-server" style="width:100%;justify-content:center;margin-bottom:14px">+ Sunucu Ekle</a>
     <div class="drawer-section">Menü</div>
     <a href="index.html" class="drawer-link active">Anasayfa</a>
     <a href="#servers" class="drawer-link">Metin2 Sunucular</a>
@@ -183,6 +177,12 @@
   </div>
 </section>
 
+<div class="page-shell">
+<aside class="skyscraper-ad skyscraper-left">
+  <div class="ad-slot"><strong>REKLAM ALANI</strong><span class="dim">160x600</span></div>
+  <div class="ad-slot"><strong>REKLAM ALANI</strong><span class="dim">160x300</span></div>
+</aside>
+<div class="page-main">
 <div class="container">
   <div class="layout-grid">
     <main>
@@ -278,6 +278,12 @@
       </div>
     </aside>
   </div>
+</div>
+</div>
+<aside class="skyscraper-ad skyscraper-right">
+  <div class="ad-slot"><strong>REKLAM ALANI</strong><span class="dim">160x600</span></div>
+  <div class="ad-slot"><strong>REKLAM ALANI</strong><span class="dim">160x300</span></div>
+</aside>
 </div>
 
 <!-- Footer -->

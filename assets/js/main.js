@@ -121,6 +121,16 @@
     });
   });
 
+  /* ---------- TOP BANNER DISMISS ---------- */
+  window.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('[data-close-banner]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var el = document.getElementById(btn.getAttribute('data-close-banner'));
+        if (el) el.style.display = 'none';
+      });
+    });
+  });
+
   /* ---------- SEO "SHOW MORE" TOGGLE ---------- */
   window.addEventListener('DOMContentLoaded', function () {
     var toggle = document.getElementById('seoToggle');
@@ -165,6 +175,22 @@
     return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
   }
 
+  /* Deterministic pseudo view/comment counters based on server id, so
+     numbers stay stable across reloads without needing a backend. */
+  function seededNumber(id, max, min) {
+    min = min || 0;
+    var str = String(id);
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) { hash = (hash * 31 + str.charCodeAt(i)) >>> 0; }
+    return min + (hash % (max - min + 1));
+  }
+  function viewCount(id) { return seededNumber('v' + id, 480, 12); }
+  function commentCount(id) { return seededNumber('c' + id, 24, 0); }
+
+  var EYE_ICON = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
+  var COMMENT_ICON = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
+  var CALENDAR_ICON = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
+
   function renderServers(filter) {
     var grid = document.getElementById('serverGrid');
     if (!grid) return;
@@ -174,26 +200,29 @@
       return s.status === filter;
     });
     if (!list.length) {
-      grid.innerHTML = '<p style="color:var(--color-text-secondary);grid-column:1/-1">Bu kategoride sunucu bulunamadı.</p>';
+      grid.innerHTML = '<p style="color:var(--color-text-secondary)">Bu kategoride sunucu bulunamadı.</p>';
       return;
     }
     grid.innerHTML = list.map(function (s) {
       var badge = s.status === 'new' ? '<span class="server-badge new">YENİ</span>' :
         s.status === 'soon' ? '<span class="server-badge soon">YAKINDA</span>' : '';
+      var views = viewCount(s.id), comments = commentCount(s.id);
       return (
         '<div class="server-card">' +
-          '<img class="server-logo" src="' + s.logo + '" alt="' + escapeHtml(s.name) + ' logosu">' +
+          '<div class="server-logo-col"><img class="server-logo" src="' + s.logo + '" alt="' + escapeHtml(s.name) + ' logosu"></div>' +
           '<div class="server-info">' +
             '<div class="server-name-row"><span class="server-name">' + escapeHtml(s.name) + '</span>' + badge + '</div>' +
-            '<p class="server-desc">' + escapeHtml(s.description) + '</p>' +
             '<div class="server-meta">' +
-              '<span>' + escapeHtml(s.game) + '</span><span>&middot;</span>' +
-              '<span>Açılış: ' + escapeHtml(s.openDate) + '</span>' +
+              '<span class="server-date">' + CALENDAR_ICON + ' ' + escapeHtml(s.openDate) + '</span>' +
+              '<span class="server-desc">' + escapeHtml(s.game) + ' &middot; ' + escapeHtml(s.description) + '</span>' +
             '</div>' +
           '</div>' +
           '<div class="server-vote">' +
-            '<button class="vote-btn" data-vote-id="' + s.id + '" aria-label="Oy ver">&#9650;</button>' +
-            '<span class="vote-count" data-vote-count="' + s.id + '">' + s.votes + '</span>' +
+            '<div class="server-stats">' +
+              '<span>' + EYE_ICON + ' ' + views + '</span>' +
+              '<span>' + COMMENT_ICON + ' ' + comments + '</span>' +
+            '</div>' +
+            '<button class="vote-btn" data-vote-id="' + s.id + '" aria-label="Oy ver">&#9650; <span class="vote-count" data-vote-count="' + s.id + '">' + s.votes + '</span></button>' +
           '</div>' +
         '</div>'
       );
@@ -223,15 +252,20 @@
     if (!grid) return;
     var list = SERVERS.filter(function (s) { return s.sponsored; });
     grid.innerHTML = list.map(function (s) {
+      var views = viewCount(s.id), votes = s.votes;
       return (
         '<div class="sponsor-card">' +
           '<span class="sponsor-badge">SPONSORLU</span>' +
-          '<div style="display:flex;gap:12px;align-items:center;margin-bottom:10px">' +
+          '<div style="display:flex;gap:12px;align-items:center;margin-bottom:8px">' +
             '<img class="server-logo" src="' + s.logo + '" alt="' + escapeHtml(s.name) + ' logosu">' +
             '<div><div class="server-name">' + escapeHtml(s.name) + '</div>' +
             '<div class="server-meta"><span>' + escapeHtml(s.game) + '</span></div></div>' +
           '</div>' +
           '<p class="server-desc">' + escapeHtml(s.description) + '</p>' +
+          '<div class="sponsor-stats">' +
+            '<span>' + EYE_ICON + ' ' + views + '</span>' +
+            '<span>&#9650; ' + votes + '</span>' +
+          '</div>' +
         '</div>'
       );
     }).join('');

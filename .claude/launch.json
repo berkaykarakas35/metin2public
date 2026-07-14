@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "pvphub-site",
+      "name": "static",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8845"],
-      "port": 8845
+      "runtimeArgs": ["-m", "http.server", "8098"],
+      "port": 8098
     }
   ]
 }
