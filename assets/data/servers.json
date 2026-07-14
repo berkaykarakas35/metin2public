@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "DemoMetin Legends",
+    "game": "Metin2",
+    "description": "Yüksek deneyim çarpanlı, aktif GM desteğine sahip yeni nesil demo sunucu. Klan savaşları ve özel event sistemi ile öne çıkar.",
+    "status": "new",
+    "sponsored": true,
+    "openDate": "18 Temmuz 2026",
+    "votes": 342,
+    "logo": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231a1d27'/%3E%3Ctext x='50%25' y='50%25' fill='%23f5a623' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EDML%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 2,
+    "name": "TestMyko Realm",
+    "game": "Metin2",
+    "description": "Dengeli PvP mekaniği ve özel harita desteğiyle sunulan örnek bir Metin2 sunucusu. Sabit ekonomi hedeflenmiştir.",
+    "status": "opened",
+    "sponsored": true,
+    "openDate": "02 Haziran 2026",
+    "votes": 891,
+    "logo": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231a1d27'/%3E%3Ctext x='50%25' y='50%25' fill='%2322c55e' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3ETMR%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 3,
+    "name": "SampleMetin Arena",
+    "game": "Metin2",
+    "description": "Klasik Metin2 deneyimini modern sunucu altyapısıyla birleştiren örnek proje. Haftalık turnuvalar planlanmaktadır.",
+    "status": "soon",
+    "sponsored": false,
+    "openDate": "25 Temmuz 2026",
+    "votes": 120,
+    "logo": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231a1d27'/%3E%3Ctext x='50%25' y='50%25' fill='%23f5a623' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3ESMA%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 4,
+    "name": "ExampleMetin Rising",
+    "game": "Metin2",
+    "description": "Uzun soluklu oynanış için tasarlanmış, düşük çarpanlı örnek sunucu. Emek odaklı topluluk hedeflenir.",
+    "status": "new",
+    "sponsored": false,
+    "openDate": "20 Temmuz 2026",
+    "votes": 205,
+    "logo": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231a1d27'/%3E%3Ctext x='50%25' y='50%25' fill='%23f5a623' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EEMR%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 5,
+    "name": "DemoMetin Chronicles",
+    "game": "Metin2",
+    "description": "Özgün harita ve quest sistemine sahip demo amaçlı bir Metin2 sunucusu örneği. Yeni oyunculara özel eğitim bölgesi içerir.",
+    "status": "opened",
+    "sponsored": false,
+    "openDate": "14 Mayıs 2026",
+    "votes": 567,
+    "logo": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231a1d27'/%3E%3Ctext x='50%25' y='50%25' fill='%2322c55e' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EDMC%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 6,
+    "name": "TrialMetin Frontier",
+    "game": "Metin2",
+    "description": "Test amaçlı hazırlanmış, klan tabanlı savaş sistemine sahip örnek Metin2 sunucusu.",
+    "status": "soon",
+    "sponsored": false,
+    "openDate": "30 Temmuz 2026",
+    "votes": 44,
+    "logo": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231a1d27'/%3E%3Ctext x='50%25' y='50%25' fill='%23f5a623' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3ETMF%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 7,
+    "name": "MockMetin Eternal",
+    "game": "Metin2",
+    "description": "Yapay veriyle hazırlanmış örnek sunucu kaydı. Sabit ekonomi ve düşük gecikme hedefiyle tasarlanmıştır.",
+    "status": "opened",
+    "sponsored": false,
+    "openDate": "03 Nisan 2026",
+    "votes": 1023,
+    "logo": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231a1d27'/%3E%3Ctext x='50%25' y='50%25' fill='%2322c55e' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EMME%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 8,
+    "name": "PlaceholderMetin X",
+    "game": "Metin2",
+    "description": "Demo amaçlı üretilmiş, yeni başlayanlara yönelik kolay ilerlemeli örnek sunucu verisi.",
+    "status": "new",
+    "sponsored": false,
+    "openDate": "16 Temmuz 2026",
+    "votes": 78,
+    "logo": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231a1d27'/%3E%3Ctext x='50%25' y='50%25' fill='%23f5a623' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EPMX%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 9,
+    "name": "FakeMetin Odyssey",
+    "game": "Metin2",
+    "description": "Sadece örnekleme amacıyla oluşturulmuş kurgusal bir sunucu kaydı. Gerçek bir sunucuyu temsil etmez.",
+    "status": "opened",
+    "sponsored": false,
+    "openDate": "22 Mart 2026",
+    "votes": 312,
+    "logo": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231a1d27'/%3E%3Ctext x='50%25' y='50%25' fill='%2322c55e' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EFMO%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 10,
+    "name": "DummyMetin Vanguard",
+    "game": "Metin2",
+    "description": "Test verisi olarak eklenmiş örnek sunucu. Sezonluk lider tablosu ve klan görevleri planlanmaktadır.",
+    "status": "soon",
+    "sponsored": false,
+    "openDate": "05 Ağustos 2026",
+    "votes": 12,
+    "logo": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231a1d27'/%3E%3Ctext x='50%25' y='50%25' fill='%23f5a623' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EDMV%3C/text%3E%3C/svg%3E"
+  }
+]

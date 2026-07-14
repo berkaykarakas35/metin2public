@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "category": "Rehber",
+    "title": "Yeni Başlayanlar İçin Sunucu Seçim Rehberi",
+    "excerpt": "Bir PvP sunucusuna katılmadan önce çarpan oranı, ekonomi dengesi ve topluluk aktivitesi gibi kriterleri nasıl değerlendirebileceğinizi anlatıyoruz.",
+    "date": "10 Temmuz 2026",
+    "image": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='220'%3E%3Crect width='400' height='220' fill='%23101620'/%3E%3Ctext x='50%25' y='50%25' fill='%23f5a623' font-family='sans-serif' font-size='22' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3ERehber%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 2,
+    "category": "Strateji",
+    "title": "Klan Savaşlarında Etkili Koordinasyon Taktikleri",
+    "excerpt": "Büyük ölçekli klan çatışmalarında rol dağılımı, iletişim düzeni ve zamanlama üzerine pratik öneriler.",
+    "date": "07 Temmuz 2026",
+    "image": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='220'%3E%3Crect width='400' height='220' fill='%23101620'/%3E%3Ctext x='50%25' y='50%25' fill='%2322c55e' font-family='sans-serif' font-size='22' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EStrateji%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 3,
+    "category": "Ekonomi",
+    "title": "Sunucu İçi Ekonomiyi Dengede Tutmanın Yolları",
+    "excerpt": "Enflasyonun önüne geçmek isteyen sunucu yöneticileri için kaynak akışı ve item sink mekanikleri üzerine bir bakış.",
+    "date": "01 Temmuz 2026",
+    "image": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='220'%3E%3Crect width='400' height='220' fill='%23101620'/%3E%3Ctext x='50%25' y='50%25' fill='%23f5a623' font-family='sans-serif' font-size='22' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EEkonomi%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 4,
+    "category": "Haber",
+    "title": "Bu Ay Öne Çıkan Yeni Açılışlara Genel Bakış",
+    "excerpt": "Farklı oyun türlerinde açılışa geçen örnek sunucuları, sundukları özellikler açısından kısaca karşılaştırıyoruz.",
+    "date": "27 Haziran 2026",
+    "image": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='220'%3E%3Crect width='400' height='220' fill='%23101620'/%3E%3Ctext x='50%25' y='50%25' fill='%2322c55e' font-family='sans-serif' font-size='22' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3EHaber%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 5,
+    "category": "İpuçları",
+    "title": "Karakter Geliştirmede Zaman Kaybını Azaltma Yöntemleri",
+    "excerpt": "Günlük görevleri verimli tamamlamak ve seviye atlama sürecini hızlandırmak için pratik ipuçları.",
+    "date": "20 Haziran 2026",
+    "image": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='220'%3E%3Crect width='400' height='220' fill='%23101620'/%3E%3Ctext x='50%25' y='50%25' fill='%23f5a623' font-family='sans-serif' font-size='22' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3E%C4%B0pu%C3%A7lar%C4%B1%3C/text%3E%3C/svg%3E"
+  },
+  {
+    "id": 6,
+    "category": "Topluluk",
+    "title": "Sunucu Topluluğunuzu Büyütmenin Beş Yolu",
+    "excerpt": "Etkinlik takvimleri, ödül sistemleri ve sosyal medya kullanımıyla oyuncu bağlılığını artırma yöntemleri.",
+    "date": "14 Haziran 2026",
+    "image": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='220'%3E%3Crect width='400' height='220' fill='%23101620'/%3E%3Ctext x='50%25' y='50%25' fill='%2322c55e' font-family='sans-serif' font-size='22' font-weight='700' text-anchor='middle' dominant-baseline='middle'%3ETopluluk%3C/text%3E%3C/svg%3E"
+  }
+]

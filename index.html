@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metin2Public - Metin2 Sunucu Tanıtım Platformu (Demo)</title>
+<meta name="description" content="Metin2 PvP sunucularını keşfetmek için hazırlanmış örnek/demo bir tanıtım platformu arayüzü.">
+<link rel="icon" href="assets/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- Marquee ticker -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span class="marquee-item">⚡ DemoMetin Legends açılışı 18 Temmuz'da başlıyor</span>
+    <span class="marquee-item">🔥 TestMyko Realm haftalık turnuva kayıtları açık</span>
+    <span class="marquee-item">🎁 Yeni üyelere özel hoş geldin ödülleri</span>
+    <span class="marquee-item">⚡ DemoMetin Legends açılışı 18 Temmuz'da başlıyor</span>
+    <span class="marquee-item">🔥 TestMyko Realm haftalık turnuva kayıtları açık</span>
+    <span class="marquee-item">🎁 Yeni üyelere özel hoş geldin ödülleri</span>
+  </div>
+</div>
+<div class="marquee-bar promo-bar">
+  <div class="marquee-track">
+    <span class="marquee-item">★ Bu alana reklamınızı verebilirsiniz — METIN2PUBLIC.COM ★</span>
+    <span class="marquee-item">★ Sunucunuzu öne çıkarın, sponsorlu listeye katılın ★</span>
+    <span class="marquee-item">★ Bu alana reklamınızı verebilirsiniz — METIN2PUBLIC.COM ★</span>
+    <span class="marquee-item">★ Sunucunuzu öne çıkarın, sponsorlu listeye katılın ★</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-topbar">
+    <div class="container">
+      <div class="live-badge">
+        <span class="live-dot"></span>
+        Canlı: <strong>214</strong><span class="live-extra"> oyuncu online · 48 aktif sunucu</span>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-social">
+          <a href="#" class="tbs" title="Discord"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg></a>
+          <a href="#" class="tbs" title="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#" class="tbs" title="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="6" width="20" height="12" rx="3"/></svg></a>
+        </div>
+        <span class="topbar-sep"></span>
+        <div class="tb-capsule">
+          <button type="button" class="tbc-part" data-theme-toggle title="Tema Değiştir">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <span>Tema</span>
+          </button>
+          <span class="tbc-div"></span>
+          <a class="tbc-part" href="#" title="English">
+            <svg width="16" height="11" viewBox="0 0 18 12"><rect width="18" height="12" fill="#E30A17"/><circle cx="7" cy="6" r="3.2" fill="white"/><circle cx="8.2" cy="6" r="2.5" fill="#E30A17"/></svg>
+            <span>TR</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-mainbar">
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="assets/images/logo.png" alt="Metin2Public" class="header-logo-img">
+      </a>
+      <nav class="header-nav">
+        <a href="index.html" class="active">ANASAYFA</a>
+        <a href="#servers">METIN2 SUNUCULAR</a>
+        <a href="#blog">BLOG</a>
+        <a href="#">FORUM</a>
+        <a href="#">TAKVİM</a>
+        <a href="#">ÇEKİLİŞLER</a>
+        <a href="#">REKLAM VER</a>
+      </nav>
+      <div class="header-right">
+        <a href="#" class="btn btn-accent btn-desktop-only"><span>+</span> Sunucu Ekle</a>
+        <div class="header-search" id="headerSearchWrap">
+          <div class="search-box" id="headerSearchBox">
+            <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></span>
+            <input type="text" id="headerSearch" placeholder="Sunucu ara..." autocomplete="off">
+          </div>
+        </div>
+        <button class="btn btn-ghost notif-btn" id="notifBtn" aria-label="Bildirimler">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          <span class="notif-badge" style="display:none">3</span>
+        </button>
+        <a href="#" class="btn btn-outline btn-desktop-only">Giriş Yap</a>
+        <a href="#" class="btn btn-accent btn-desktop-only">Kayıt Ol</a>
+        <button class="hamburger-btn btn btn-ghost" id="hamburgerBtn" aria-label="Menü">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="quickbar">
+    <div class="container">
+      <nav class="quickbar-inner">
+        <a href="#" class="qbar-link">Sosyal</a>
+        <a href="#" class="qbar-link">Videolar <span class="qbar-badge new">YENİ</span></a>
+        <a href="#" class="qbar-link">Sunucu Karşılaştır</a>
+        <a href="#" class="qbar-link">Tarayıcı Eklentisi</a>
+        <a href="#" class="qbar-link">Araçlar <span class="qbar-badge hot">HOT</span></a>
+        <a href="#" class="qbar-link">Fiyat Listesi</a>
+        <a href="#" class="qbar-link">Wiki</a>
+        <a href="#" class="qbar-link">S.S.S.</a>
+        <a href="#" class="qbar-link">Liderlik</a>
+        <a href="#" class="qbar-link">İletişim</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="index.html" class="header-logo">
+      <img src="assets/images/logo.png" alt="Metin2Public" class="header-logo-img">
+    </a>
+    <button class="drawer-close" id="drawerClose" aria-label="Kapat">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="#" class="btn btn-accent" style="width:100%;justify-content:center;margin-bottom:14px">+ Sunucu Ekle</a>
+    <div class="drawer-section">Menü</div>
+    <a href="index.html" class="drawer-link active">Anasayfa</a>
+    <a href="#servers" class="drawer-link">Metin2 Sunucular</a>
+    <a href="#blog" class="drawer-link">Blog</a>
+    <a href="#" class="drawer-link">Forum</a>
+    <a href="#" class="drawer-link">Takvim</a>
+    <a href="#" class="drawer-link">Çekilişler</a>
+    <div class="drawer-section">Hesap</div>
+    <div class="drawer-auth">
+      <a href="#" class="btn btn-outline" style="flex:1;justify-content:center">Giriş Yap</a>
+      <a href="#" class="btn btn-accent" style="flex:1;justify-content:center">Kayıt Ol</a>
+    </div>
+  </nav>
+  <div class="drawer-footer">
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-ghost" data-set-theme="light" style="flex:1;justify-content:center">☀ Açık</button>
+      <button class="btn btn-ghost" data-set-theme="dark" style="flex:1;justify-content:center">☾ Koyu</button>
+    </div>
+  </div>
+</div>
+
+<!-- Stats row -->
+<section class="stats-row">
+  <div class="container">
+    <div class="stat-item">
+      <span class="stat-icon">🖥</span>
+      <div><div class="stat-value" id="statLiveServers">-</div><div class="stat-label">Aktif Sunucu</div></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-icon">👍</span>
+      <div><div class="stat-value" id="statVotes">-</div><div class="stat-label">Toplam Oy</div></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-icon">🆕</span>
+      <div><div class="stat-value" id="statNewToday">-</div><div class="stat-label">Bugün Yeni</div></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-icon">📅</span>
+      <div><div class="stat-value" id="statNewServers">-</div><div class="stat-label">Yakında Açılacak</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>En İyi <span>Metin2 Sunucularını</span> Keşfet</h1>
+    <p>Metin2 için hazırlanmış örnek sunucu tanıtımlarını incele, oy ver ve favorilerini kaydet.</p>
+    <form class="hero-search" onsubmit="return false;">
+      <input type="text" placeholder="Sunucu adı veya oyun türü ara...">
+      <button type="submit" class="btn btn-accent">Ara</button>
+    </form>
+  </div>
+</section>
+
+<div class="container">
+  <div class="layout-grid">
+    <main>
+
+      <!-- Stories -->
+      <section class="section" style="padding-top:0">
+        <div class="section-head">
+          <h2><span class="dot"></span>Son 24 Saat</h2>
+        </div>
+        <div class="stories-scroll" id="storiesScroll"></div>
+      </section>
+
+      <!-- Sponsored -->
+      <section class="section">
+        <div class="section-head">
+          <h2><span class="dot"></span>Sponsorlu Sunucular</h2>
+        </div>
+        <div class="sponsor-grid" id="sponsorGrid"></div>
+      </section>
+
+      <!-- Server list -->
+      <section class="section" id="servers">
+        <div class="section-head">
+          <h2><span class="dot"></span>Tüm Metin2 Sunucuları</h2>
+        </div>
+        <div class="server-tabs">
+          <button class="server-tab active" data-filter="all">Tümü</button>
+          <button class="server-tab" data-filter="new">Yeni</button>
+          <button class="server-tab" data-filter="soon">Yakında</button>
+          <button class="server-tab" data-filter="opened">Açılmış</button>
+        </div>
+        <div class="server-grid" id="serverGrid"></div>
+        <div class="pagination">
+          <a href="#">&laquo;</a>
+          <span class="active">1</span>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section class="section" id="blog">
+        <div class="section-head">
+          <h2><span class="dot"></span>Blog</h2>
+          <a href="#" class="see-all">Tümünü Gör &rarr;</a>
+        </div>
+        <div class="blog-grid" id="blogGrid"></div>
+      </section>
+
+      <!-- SEO text block -->
+      <section class="section">
+        <div class="seo-block">
+          <h2>Metin2 PvP Sunucuları Hakkında</h2>
+          <div class="seo-content" id="seoContent">
+            <p>Metin2Public, Metin2 odaklı PvP sunucularını tek bir yerden keşfetmenizi sağlamak amacıyla hazırlanmış örnek bir tanıtım platformudur. Platformdaki tüm sunucu, blog ve yorum içerikleri demonstrasyon amaçlı üretilmiş kurgusal verilerdir ve gerçek bir sunucuyu temsil etmez.</p>
+            <p>Bir oyun sunucusuna katılmadan önce deneyim çarpanı, ekonomi dengesi, GM/yönetici aktivitesi ve topluluk büyüklüğü gibi kriterleri değerlendirmek önemlidir. Bu sayfa, böyle bir değerlendirme sürecini kolaylaştıracak bir arayüz taslağı sunar.</p>
+            <p>Sunucu kartlarında yer alan oy sayısı, açılış tarihi ve açıklama alanları tamamen örnek veri seti üzerinden dinamik olarak oluşturulmaktadır. Gerçek bir kurulumda bu veriler bir veritabanından veya API'den beslenebilir.</p>
+            <p>Bu tasarım taslağı; üst bilgi çubuğu, mobil menü, sekme tabanlı filtreleme, çerez onayı ve karanlık/açık tema geçişi gibi bileşenleri örnekleyen bağımsız bir arayüz projesidir.</p>
+          </div>
+          <button class="seo-toggle" id="seoToggle">Devamını oku</button>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <div class="widget welcome-widget">
+        <h3>👋 Topluluğa Katıl</h3>
+        <p style="font-size:12.5px;color:var(--color-text-secondary);margin:0 0 4px">Oy ver, favori sunucularını kaydet ve yorum yap.</p>
+        <div class="social-login">
+          <a href="#" class="btn btn-accent">Giriş Yap</a>
+          <a href="#" class="btn btn-outline">Kayıt Ol</a>
+          <a href="#" class="btn btn-ghost">Google ile Devam Et</a>
+          <a href="#" class="btn btn-ghost">Discord ile Devam Et</a>
+        </div>
+      </div>
+
+      <div class="widget">
+        <h3>💬 Son Yorumlar</h3>
+        <div id="commentsList"></div>
+      </div>
+
+      <div class="widget upsell-widget">
+        <h3>🏆 Sıralamada Yüksel</h3>
+        <p style="font-size:12.5px;color:var(--color-text-secondary);margin:0">Premium üyelikle sunucunu listelerde öne çıkar ve daha fazla oyuncuya ulaş.</p>
+        <a href="#" class="btn btn-accent">Premium'u Keşfet</a>
+      </div>
+
+      <div class="widget discord-widget">
+        <h3 style="justify-content:center">Discord Sunucumuza Katıl</h3>
+        <p style="font-size:12.5px;color:var(--color-text-secondary);margin:0">Güncellemelerden haberdar ol, topluluğa katıl.</p>
+        <a href="#" class="btn">Discord'a Katıl</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="Metin2Public" class="footer-logo-img">
+        <p class="footer-tagline">MMO topluluğu için sevgiyle hazırlanan bir sunucu keşif platformu (demo proje).</p>
+        <p class="footer-disclaimer">Yasal Uyarı: Bu site örnek/demo amaçlı hazırlanmıştır. Listelenen tüm sunucu, yorum ve blog içerikleri kurgusaldır. © 2026 Metin2Public - Tüm hakları saklıdır.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Keşfet</h4>
+        <a href="#">Tüm Sunucular</a>
+        <a href="#">Yeni Açılışlar</a>
+        <a href="#">Blog</a>
+        <a href="#">Forum</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kategoriler</h4>
+        <a href="#">Yüksek EXP</a>
+        <a href="#">Emek Sunucuları</a>
+        <a href="#">PvP Sunucuları</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kurumsal</h4>
+        <a href="#">Hakkımızda</a>
+        <a href="#">Gizlilik Politikası</a>
+        <a href="#">Çerez Politikası</a>
+        <a href="#">İletişim</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 METIN2PUBLIC.COM</span>
+      <span>MMO topluluğu için <span class="footer-heart">♥</span> ile yapıldı</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile bottom nav -->
+<nav class="mobile-bottom-nav">
+  <div class="mbn-inner">
+    <a href="index.html" class="mbn-item active"><span>🏠</span>Anasayfa</a>
+    <a href="#servers" class="mbn-item"><span>🆕</span>Açılışlar</a>
+    <a href="#" class="mbn-item"><span>➕</span>Ekle</a>
+    <a href="#" class="mbn-item"><span>📂</span>Kategoriler</a>
+    <a href="#" class="mbn-item"><span>👤</span>Giriş</a>
+  </div>
+</nav>
+
+<button class="back-to-top" id="backToTop" aria-label="Yukarı çık">&uarr;</button>
+
+<!-- Cookie consent -->
+<div id="cookieConsent">
+  <p>🍪 Bu web sitesi size daha iyi bir deneyim sunmak için çerezler kullanır. Siteyi kullanmaya devam ederek çerez kullanımını kabul etmiş olursunuz.</p>
+  <div class="actions">
+    <a href="#" class="btn btn-outline">Detaylar</a>
+    <button class="btn btn-accent" id="cookieAccept">Kabul Et</button>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
