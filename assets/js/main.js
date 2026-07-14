@@ -274,14 +274,12 @@
   function renderStories() {
     var scroller = document.getElementById('storiesScroll');
     if (!scroller) return;
-    scroller.innerHTML = BLOG.slice(0, 6).map(function (b) {
+    scroller.innerHTML = BLOG.slice(0, 8).map(function (b) {
+      var initial = (b.category || b.title || '?').trim().charAt(0).toUpperCase();
       return (
-        '<a class="story-card" href="#">' +
-          '<img class="story-thumb" src="' + b.image + '" alt="">' +
-          '<div class="story-body">' +
-            '<div class="story-cat">' + escapeHtml(b.category) + '</div>' +
-            '<div class="story-title">' + escapeHtml(b.title) + '</div>' +
-          '</div>' +
+        '<a class="story-item" href="#" title="' + escapeHtml(b.title) + '">' +
+          '<span class="story-ring"><span class="story-avatar">' + escapeHtml(initial) + '</span></span>' +
+          '<span class="story-label">' + escapeHtml(b.category) + '</span>' +
         '</a>'
       );
     }).join('');
